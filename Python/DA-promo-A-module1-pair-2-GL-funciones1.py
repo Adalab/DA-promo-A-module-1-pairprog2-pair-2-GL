@@ -7,7 +7,7 @@
 # Si el primer parámetro es un string vacío, la función nos devuelve el valor del segundo parámetro y viceversa.
 # Probad la función para las siguientes combinaciones de "números"
 
-#Opción Alicia:
+#Opción 1:
 # def funcion1(string1, string2):
 #     if string1 == " " and string2 == " ":
 #         print("0")
@@ -136,7 +136,23 @@ arr2 = [23, 14, 53, 17, 80]
 
 # comparador()
 
+arr1 = [13, 64, 15, 17, 88]
+arr2 = [23, 14, 53, 17, 80]
+# resultado = [23, 64, 53, 17, 88]
 
+
+def comparador (arr1, arr2):
+    z = 0     #variable que representa la posición de la lista
+    arr3=[]     #Para meter las cosas en la lista
+    for i in range(len(arr1)):
+        z=z+1      #repetición de bucle
+        if arr1[(z-1)] <= arr2[(z-1)]:
+            arr3.append(arr2[(z-1)])
+        else:  
+            arr3.append(arr1[(z-1)])
+    print(arr3)                  
+
+comparador(arr1, arr2)
 
 
 
