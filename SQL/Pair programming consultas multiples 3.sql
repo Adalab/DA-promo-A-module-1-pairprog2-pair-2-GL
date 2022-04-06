@@ -1,3 +1,5 @@
+-- Pair Programming consultas MÚLTIPLES 3.
+
 USE northwind ;
 
 -- Ejercicio 1
@@ -21,13 +23,12 @@ En este caso, nuestro jefe quiere saber cuantos pedidos ha gestionado
 tramitados por ella.*/
 SELECT *
 FROM orders
-WHERE employee_id IN (SELECT employee_id
-						FROM employees
+WHERE employee_id IN (	SELECT employee_id
+			FROM employees
                         WHERE last_name = 'Davolio') ;
 
 
 -- Ejercicio 3
-
 /*Extraed todas las empresas que no han comprado en el año 1997
 En este caso, nuestro jefe quiere saber cuantas empresas no han 
 comprado en el año 1997.
@@ -36,9 +37,9 @@ year . Más documentación sobre este método .*/
 
 SELECT *
 FROM customers
-WHERE customer_id NOT IN (SELECT customer_id 
-					  FROM orders
-                      WHERE YEAR(order_date) = '1997') ;
+WHERE customer_id NOT IN (	SELECT customer_id 
+				FROM orders
+                      		WHERE YEAR(order_date) = '1997') ;
 
 -- Ejercicio 4
 /*Extraed toda la información de los pedidos donde tengamos "Konbu"
