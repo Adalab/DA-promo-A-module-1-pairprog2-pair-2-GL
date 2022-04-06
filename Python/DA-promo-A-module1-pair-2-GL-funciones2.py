@@ -1,6 +1,6 @@
 ## Pair Programming - Guada y Laura - funciones II
-
-#EJERCICIO 1 OPCIÓN 1
+# HECHO ###########################################
+#EJERCICIO 1 OPCIÓN 1  HECHO ###########################################
 # Vamos a crear una "Calculadora de puntos". 
 # Tenéis que escribir una calculadora que reciba cadenas de caracteres como entrada. Los puntos representarán el número de la ecuación. 
 # Habrá puntos en un lado, un operador, y puntos de nuevo después del oparador. Los puntos y el operador estarán separados por un espacio.
@@ -87,7 +87,7 @@
 
 
 
-
+# HECHO ###########################################
 #EJERCICiO 2
 # Te despides de tu mejor amigo, "Nos vemos el próximo año".
 # Vuestro trabajo: Dado un año, encuentra el próximo cumpleaños o el año más cercano en que verás a tu mejor amigo.
@@ -126,7 +126,7 @@ def cumpleaños (año):
 
 cumpleaños (1123)
 
-
+#HECHO ###########################################
 #EJERCICIO 3
 # Tenéis que crear un función que chequee la vida de un evaporador que contiene un gas.
 # Conocemos el contenido del evaporador (contenido en ml), el porcentaje de gas que se pierde cada día 
@@ -134,30 +134,35 @@ cumpleaños (1123)
 # ⚠️ Nota: el contenido no es, de hecho, necesario en el cuerpo de la función, podéis utilizarlo o no.
 
 
-#NO ESTÁ TERMINADO
-# def vida_util(contenido,porcentaje,umbral):
 
-      
-#         if contenido > umbral:
-#             print("Tengo gas. Puedo seguir funcionando :) ")
+# def vida_util(contenido,perdida,umbral):
 
-#             dias_vida = 0
-#             for contenido in range(5):
-#                 contenido = (contenido * porcentaje) / 100
-#                 print("Contenido dentro del for: ", contenido)
-              
-#             print("Contenido fuera del for: ", contenido)
-#             dias_vida = dias_vida + 1
-#             print(dias_vida)
-            
-            
-#         else:
-#             print("Se ha acabado el gas de evaporador!. Te invito a que me rellenes :) ")
+#     dias_vida = 0
     
-# vida_util(62,33,1)
+#     contenido_minimo = contenido * umbral / 100
+#     print("este es el contenido minimo", contenido_minimo)
+#     while contenido > contenido_minimo:
+#         contenido_perdido = contenido*perdida/100
+#         contenido = contenido - contenido_perdido
+#         print(contenido)
+        
+        
+#         dias_vida = dias_vida +1   
+#         if contenido <= contenido_minimo:
+#             print("No hay suficiente gas así que tengo que dejar de funcionar. ")
+           
+#     print("Estos son los días de vida que he tenido, gracias :)", dias_vida)
+# vida_util(10,10,10)
+
+#OUTPUT
+# 0, 10, 5 => 29
+
+# 10, 10, 10 = > 22
 
 
 
+
+## NO ESTÁ TERMINADO ###########################################
 #EJERCICIO 4
 # Definid una función que tome como argumento un entero y devuelva True o False dependiendo de si el número es primo o no.
 # un número primo es un número natural mayor que 1 que no tiene divisores positivos más que 1 y él mismo.
@@ -169,23 +174,23 @@ cumpleaños (1123)
 # -1 => False
 # 5099 => True
 
-# def num_primo(arg):
+# def ereh_un_primoh(num):
+    
+#     if num == 0:
+#         print("False")
+#     elif num // num != 0:
+#         if num > 0:
+#             print("True")
+#     else:
+#         print("False")
 
-def count_sheep(n):
-    sheeps = 0
-    for sheep in range(n):
-         
-        sheeps = sheeps -1
-        print(sheeps, "sheep...")    
-count_sheep(3) 
-
-
-
-
+# ereh_un_primoh(2)      
 
 
 
-  
+
+
+# HECHO ###########################################  
 # Ejercicio 5
 # Probablemente conozcais el sistema de "me gusta" de Facebook y otras páginas. La gente puede dar "me gusta" a las publicaciones del blog, 
 # a las imágenes o a otros elementos. Queremos crear el texto que debe mostrarse junto a dicho elemento.
