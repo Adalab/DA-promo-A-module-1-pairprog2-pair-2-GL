@@ -106,6 +106,25 @@
 
 # 2001 => 2013
 
+def cumpleaños (año):
+    vernos = False
+    año = año + 1
+    
+    while vernos == False:              #Si no usamos While, no cambia ningún otro dígito, sólo el último
+        repetido = 0                     
+        numero = list(str(año))          #convierte el año en una lista de strings
+        for cumple in numero:
+            if numero.count(cumple) > 1:
+                repetido = 1
+                break
+        if repetido == 1:
+            año = año + 1 
+        else:
+            vernos = True
+
+    print('Nuestro próximo reencuentro será en el año...', año)
+
+cumpleaños (1123)
 
 
 #EJERCICIO 3
