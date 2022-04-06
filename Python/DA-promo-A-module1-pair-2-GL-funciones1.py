@@ -180,7 +180,7 @@ def repeticion (palabra):
         else:
             letras[letra] = True
             nuevo.append(')')
-    print(''.join(nuevo))        
+    print(''.join(nuevo))    
             
 
 repeticion ('recede')
