@@ -1,4 +1,4 @@
--- Pair Programming consultas CTE
+-- Pair Programming consultas CTE. ##SOLO FALTA 5. LIMPIO.
 USE northwind ;
 
 /*Ejercicio 1. Extraer en una CTE todos los nombres de las compañias y los id de los clientes.
