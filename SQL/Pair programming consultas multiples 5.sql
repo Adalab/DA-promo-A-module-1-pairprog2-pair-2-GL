@@ -8,8 +8,8 @@ Nuestro jefe quiere saber la fecha de los pedidos más recientes que ha gestiona
 SELECT order_date, employee_id, order_id, required_date, customer_id
 FROM orders AS o1
 WHERE order_date = (SELECT MAX(order_date)
-							FROM orders AS o2
-                            WHERE o1.order_id = o2.order_id) ;
+			FROM orders AS o2
+                        WHERE o1.order_id = o2.order_id) ;
 
 
 /*2.
