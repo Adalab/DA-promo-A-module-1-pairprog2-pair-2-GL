@@ -167,26 +167,25 @@ comparador(arr1, arr2)
 # "(( @"     =>  "))((" 
 # "Ocvl@GamFLAFkixkS" => "((()(()()))))(()("
 
+def repeticion (palabra):
+    palabra = palabra.lower()
+    letras={}
+    letras_repetidas=''
+    nuevo = []
+    for letra in palabra:
+        if letras.get(letra):
+            letras_repetidas+= letra
+            nuevo.append ('(')
+            
+        else:
+            letras[letra] = True
+            nuevo.append(')')
+    print(''.join(nuevo))        
+            
+
+repeticion ('recede')
 
 
-# def conv_str(str):
-palabra = ["din"]
-palabra_out = []
-
-for i in palabra[0]:
-    print("esta es la i: ", i)
-        # veces = palabra.count(i)
-        # if veces == 1:
-        #     print("(")
-        #     # palab_out = "(" .join() añadir elementos?
-        # elif veces != 1:
-        #     print(")")
-    
-        # print(veces)
-    # palab_out =     
-
-
-# conv_str("din") 
 #ver solución Anne (min 40). https://us02web.zoom.us/rec/play/5jwk2UArIqrgsPe5K4y9VrOO-pzm-I9a2e8JR5craZWA_Lgw9e7P9csjY8xFxDBKKkD3u_2u9_9bEDbr.mpetH1FwJEtKXiRZ?continueMode=true&_x_zm_rtaid=eBzLX_O7RwG_AMoR4UZbYw.1648802053437.4e8f769f2ff9e35d5dbc811300261ac6&_x_zm_rhtaid=439 
 #averiguar qué parte le estamos pidiendo y no existe (list out of range)
 
