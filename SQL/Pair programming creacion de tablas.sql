@@ -1,6 +1,7 @@
+-- Pair Programming Creación de tablas
 
 USE PairProgrammingLeccion12 ; 
-/*# Pair programming Creación de Tablas*/
+
 
 CREATE SCHEMA PairProgrammingLeccion12 ;
 
@@ -8,7 +9,8 @@ CREATE TABLE Empleados
 (idEmpleado INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
  Nombre CHAR (45) NOT NULL, 
  Tienda CHAR (45) NOT NULL, 
- Salario FLOAT) ;
+ Salario FLOAT);
+ 
 CREATE TABLE  Clientes
  (idClientes INT PRIMARY KEY AUTO_INCREMENT NOT NULL, 
  Nombre CHAR(45) NOT NULL, 
@@ -17,7 +19,7 @@ CREATE TABLE  Clientes
  Direccion CHAR(45) NOT NULL,
  Ciudad CHAR(45), 
  Provincia CHAR(45) NOT NULL, 
- Codigo_postal INT(5) NOT NULL) ;
+ Codigo_postal INT(5) NOT NULL);
 
 CREATE TABLE Zapatillas 
 (idZapatillas INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -34,7 +36,7 @@ CREATE TABLE Facturas
  Total FLOAT NOT NULL,
  FOREIGN KEY (idEmpleado) REFERENCES empleados (idEmpleado), 
  FOREIGN KEY (idClientes) REFERENCES clientes (idClientes), 
- FOREIGN KEY (idZapatillas) REFERENCES zapatillas (idZapatillas))  ;
+ FOREIGN KEY (idZapatillas) REFERENCES zapatillas (idZapatillas));
 
 
 /*En esta sesión crearemos una nueva BBDD desde 0 :músculo::tono_de_piel-4:! Supongamos que tenemos una tienda de zapatillas y que durante mucho tiempo hemos ido recopilando mucha información 
