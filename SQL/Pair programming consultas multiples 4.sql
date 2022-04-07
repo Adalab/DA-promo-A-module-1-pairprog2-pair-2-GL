@@ -30,10 +30,10 @@ artículos del producto "Grandma's Boysenberry Spread" (ProductID 6) en un solo 
 SELECT customer_id
 FROM customers
 WHERE customer_id = (SELECT order_id
-					FROM orders
-					WHERE order_id = (SELECT order_id, product_id, quantity
-										FROM orderdetails
-                                        WHERE order_id = 6));
+		    FROM orders
+		    WHERE order_id = (SELECT order_id, product_id, quantity
+				      FROM orderdetails
+                                      WHERE order_id = 6));		
 										
 
 -- Ejercicio 4
