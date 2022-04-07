@@ -32,12 +32,12 @@ En este caso queremos extraer todas las facturas que se han emitido a un cliente
 :chincheta: NOTA En este caso tendremos columnas con elementos repetidos(CustomerID, y Company Name).*/
 
 WITH facturas(order_id, customer_id, order_date, company_name) AS
-	(
+(
 	SELECT orders.order_id, orders.customer_id,orders. order_date, customers.company_name
-    FROM orders
-    LEFT JOIN customers
+    	FROM orders
+    	LEFT JOIN customers
 	ON orders.customer_id = customers.customer_id 
-    )
+)
 SELECT order_id, customer_id, order_date, company_name
 FROM facturas ;
 
@@ -56,7 +56,17 @@ SELECT COUNT(order_id), customer_id, order_date, company_name
 FROM facturas 
 GROUP BY customer_id ;
  
-/*5.
+/*5. REVISA ###############################
 Cuál la cantidad media pedida de todos los productos ProductID.
 Necesitaréis extraet la suma de las cantidades por cada producto y calcular la media de todo*/
 
+
+WITH suma_productos AS 
+(
+	SELECT product_id, SUM(quantity)
+	FROM orderdetails
+	GROUP BY product_id
+)
+SELECT AVG(s.quantity), product_id, SUM(quantity)
+FROM orderdetails AS s
+GROUP BY product_id;
