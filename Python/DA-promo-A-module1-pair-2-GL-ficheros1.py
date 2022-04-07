@@ -10,54 +10,104 @@
 # Cambiad el directorio de trabajo a la carpeta "datos". Antes de seguir chequead que estáis trabajando en la carpeta "datos"..
 # Cambiad el nombre de la carpeta creada en el punto 2 a "primera-toma-contacto"
 
-# def donde_trabajamos():
-#     import os
-#     import shutil
-#     origen = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/saludo.txt")
-#     destino = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/datos/")
-#     aprendiendo_ficheros = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/") 
-#     primera_toma_contacto = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/primera-toma-contacto/")
-
-#     os.getcwd()
-#     os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/")
-#     try:
-#         os.mkdir("aprendiendo-ficheros")
-#     except OSError:
-#         print("La creación del directorio falló porque ya existe 'aprendiendo-ficheros'")
-#     else:
-#         print("Se ha creado el directorio: 'aprendiendo-ficheros'")
-    
-#     os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/")
-#     os.getcwd()                                                                                                                 #quitar getcwd
-#     print(os.listdir())
-#     # os.mkdir("datos")                                                                                                         #otro try/except
-
-#     # os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/saludo.txt")
-
-#     # shutil.move(origen, destino)
-    
-#     os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/datos/")
-#     print(os.getcwd())
-
-#     os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/")
-#     os.rename(aprendiendo_ficheros, primera_toma_contacto)
-#     os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/primera-toma-contacto/datos/")       #no nos cambia el nombre de la carpeta
-        # PRUEBA OS.COWN
-    
-    
-   
-# donde_trabajamos()
+#Pistas 
+# La función tendrá que recibir 3 parámetros:
+# El nombre del nombre de la primera carpeta
+# El nombre de la carpeta segunda carpeta
+# El nombre con el que queramos cambiar el nombre de la primera carpeta creada
+# Para saber si las carpetas ya existen tendréis que usar lstdir(recordad que nos devuelve una lista de ficheros y carpetas).
+# Para poder controlar los errores tendremos que usar un if loop, que si el fichero existe, nos devuelva un mensaje de que el fichero ya existe. En caso de que no exista, los deberéis crear y que la función nos muestre un mensaje de que se ha creado.
+# Tendréis que ir cambiando de directorio para poder crear las carpetas y cambiar sus nombres.
 
 
-
-def leer_saludo():
-
+def donde_trabajamos(aprendiendo_ficheros, primera_toma_contacto, arg_3):
     import os
-    os.getcwd()
+    import shutil
+    
+    
+    # origen = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/saludo.txt")
+    # destino = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/datos/")
 
-    os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/primera-toma-contacto/datos/")
-    os.read
+    aprendiendo_ficheros = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/") 
+    primera_toma_contacto = ("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/primera-toma-contacto/")
+    
+    print(os.getcwd())
+    os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/")                                  
 
 
-leer_saludo()
+    
 
+    # if "aprendiendo-ficheros" == primera_carp:
+    #     print("La creación del directorio falló porque ya existe 'aprendiendo-ficheros'")
+
+    try:
+        os.mkdir("aprendiendo-ficheros")                                                                                #creo carpeta aprendiendo-ficheros
+    except OSError:
+        print("La creación del directorio falló porque ya existe 'aprendiendo-ficheros'")
+    else:
+        print("Se ha creado el directorio: 'aprendiendo-ficheros'")
+    
+    # os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/")
+    # os.getcwd()                                                                                                                 
+    # print("Estos son los archivos que hay en nuestra carpeta, " , os.listdir())
+
+    
+    try:                                                                                                                #creo carpeta datos
+        os.mkdir("datos")
+    except OSError:
+        print("La creación del directorio falló porque ya existe 'datos'")
+    else:
+        print("Se ha creado el directorio: 'datos'")
+
+                                                                                                           
+    os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/datos/")
+    print("Estamos en esta carpeta: ", os.getcwd())
+
+    
+    
+    os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/")
+    print("Estamos en esta carpetaaaaaaaaaaaaa: ", os.getcwd())
+
+    # os.rename(aprendiendo_ficheros, primera_toma_contacto)
+    # print(os.listdir())
+    arg_3 = shutil.move(aprendiendo_ficheros,primera_toma_contacto)
+    print(os.listdir())
+    
+donde_trabajamos('aprendiendo_ficheros', 'datos', 'arg_3') 
+
+   
+
+
+
+
+######Función 2  ##########IF
+
+# Antes de empezar, recordad descargaros el fichero saludo.txt y guardarlo en el repo en el que estáis trabajando, dentro de una carpeta que se llame "datos".
+# Lea el fichero que se llame "saludo.txt y muestre su contenido completo.
+# Muestra la línea 4 del fichero
+
+# 💡 Pistas para resolver este ejercicio 💡
+# Antes de empezar, tendréis que saber cuál es vuestro directorio de trabajo.
+# Tened en cuenta en que carpeta estáis. Si vuestro directorio de trabajo no es "datos" tendréis que cambiarlo o poner la ruta relativa a la carpeta "datos".
+# Usar if... else para evitar que se nos pare el código.
+# Para cambiar el fichero podréis usar el comando input para preguntar el usuario donde está el fichero y que se pueda usar la ruta relativa o absoluta.
+# Happy coding! 💪
+
+# def leer_saludo():
+
+#     import os
+#     print(os.getcwd())
+#     os.chdir("/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/datos")
+#     ubicacion_archivo = "/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python/aprendiendo-ficheros/datos"
+#     print("Hemos cambiado el archivo aquí: ", os.getcwd())                              
+#     print(os.listdir(ubicacion_archivo))
+
+#     with open('saludo.txt','r') as f:
+#         print("Este es el contenido del archivo completo: -----> ", f.read())
+
+#     with open('saludo.txt','r') as f:
+#         print("\n")
+#         print("Esta es la línea 4 del archivo: -----> ", f.readlines(4))
+    
+
+# leer_saludo()
