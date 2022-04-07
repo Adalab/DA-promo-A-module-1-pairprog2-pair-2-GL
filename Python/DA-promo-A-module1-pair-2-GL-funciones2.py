@@ -1,6 +1,7 @@
 ## Pair Programming - Guada y Laura - funciones II
-# HECHO ###########################################
-#EJERCICIO 1 OPCIÓN 1  HECHO ###########################################
+
+# HECHO# HECHO###################################################################  
+#EJERCICIO 1 OPCIÓN 1
 # Vamos a crear una "Calculadora de puntos". 
 # Tenéis que escribir una calculadora que reciba cadenas de caracteres como entrada. Los puntos representarán el número de la ecuación. 
 # Habrá puntos en un lado, un operador, y puntos de nuevo después del oparador. Los puntos y el operador estarán separados por un espacio.
@@ -87,7 +88,7 @@
 
 
 
-# HECHO ###########################################
+
 #EJERCICiO 2
 # Te despides de tu mejor amigo, "Nos vemos el próximo año".
 # Vuestro trabajo: Dado un año, encuentra el próximo cumpleaños o el año más cercano en que verás a tu mejor amigo.
@@ -106,27 +107,8 @@
 
 # 2001 => 2013
 
-def cumpleaños (año):
-    vernos = False
-    año = año + 1
-    
-    while vernos == False:              #Si no usamos While, no cambia ningún otro dígito, sólo el último
-        repetido = 0                     
-        numero = list(str(año))          #convierte el año en una lista de strings
-        for cumple in numero:
-            if numero.count(cumple) > 1:
-                repetido = 1
-                break
-        if repetido == 1:
-            año = año + 1 
-        else:
-            vernos = True
 
-    print('Nuestro próximo reencuentro será en el año...', año)
-
-cumpleaños (1123)
-
-#HECHO ###########################################
+#HECHO##########################################################
 #EJERCICIO 3
 # Tenéis que crear un función que chequee la vida de un evaporador que contiene un gas.
 # Conocemos el contenido del evaporador (contenido en ml), el porcentaje de gas que se pierde cada día 
@@ -160,9 +142,7 @@ cumpleaños (1123)
 # 10, 10, 10 = > 22
 
 
-
-
-## NO ESTÁ TERMINADO ###########################################
+## NO ESTÁ TERMINADO
 #EJERCICIO 4
 # Definid una función que tome como argumento un entero y devuelva True o False dependiendo de si el número es primo o no.
 # un número primo es un número natural mayor que 1 que no tiene divisores positivos más que 1 y él mismo.
@@ -190,7 +170,9 @@ cumpleaños (1123)
 
 
 
-# HECHO ###########################################  
+
+
+# HECHO###################################################################  
 # Ejercicio 5
 # Probablemente conozcais el sistema de "me gusta" de Facebook y otras páginas. La gente puede dar "me gusta" a las publicaciones del blog, 
 # a las imágenes o a otros elementos. Queremos crear el texto que debe mostrarse junto a dicho elemento.
