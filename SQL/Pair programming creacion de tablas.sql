@@ -18,7 +18,8 @@ CREATE TABLE  Clientes
  Email CHAR(45) NOT NULL, 
  Direccion CHAR(45) NOT NULL,
  Ciudad CHAR(45), 
- Provincia CHAR(45) NOT NULL, 
+ Provincia CHAR(45) NOT NULL,
+ Pais CHAR(45) NOT NULL,
  Codigo_postal INT(5) NOT NULL);
 
 CREATE TABLE Zapatillas 
