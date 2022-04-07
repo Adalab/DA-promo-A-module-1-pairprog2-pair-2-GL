@@ -36,7 +36,7 @@ WHERE customer_id = (SELECT order_id
                                       WHERE order_id = 6));		
 										
 
--- Ejercicio 4. SUBCONSULTA.
+-- Ejercicio 4. SUBCONSULTA EN WHERE.
 /*Extraed los 10 productos mas caros. Nos siguen pidiendo más queries correlacionadas. En este caso 
 queremos saber cuáles son los 10 productos más caros. Qué producto es más popular.
 
