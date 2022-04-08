@@ -142,7 +142,7 @@
 # 10, 10, 10 = > 22
 
 
-## NO ESTÁ TERMINADO
+## HECHOOOOOOOOOOOOOOOOOOOOOOOOOO
 #EJERCICIO 4
 # Definid una función que tome como argumento un entero y devuelva True o False dependiendo de si el número es primo o no.
 # un número primo es un número natural mayor que 1 que no tiene divisores positivos más que 1 y él mismo.
@@ -154,20 +154,24 @@
 # -1 => False
 # 5099 => True
 
-# def ereh_un_primoh(num):
+def ereh_un_primoh(num):
     
-#     if num == 0:
-#         print("False")
-#     elif num // num != 0:
-#         if num > 0:
-#             print("True")
-#     else:
-#         print("False")
+    if num <= 0:
+        print("False")
+    elif num > 1:
+        # if num // num != 0:
+        for i in range(2, int(num/2)+1):                                             ####   entiende esto
+            if num % i == 0:
+                print("False")
+                break
+        else:
+            print("True")
+            
+                  
+    else:
+        print("False")
 
-# ereh_un_primoh(2)      
-
-
-
+ereh_un_primoh(5099)      
 
 
 
