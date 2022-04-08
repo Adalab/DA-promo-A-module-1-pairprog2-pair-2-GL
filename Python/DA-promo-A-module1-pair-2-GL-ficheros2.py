@@ -29,7 +29,7 @@
 
 # 1. Crear ficher e introducirle contenido.
 import os
-from 
+ 
 carpeta_python =  "/mnt/c/Users/a/Desktop/Adalab/DA-promo-A-module-1-pairprog2-pair-2-GL/Python"  
 
 
@@ -43,25 +43,12 @@ with open('ficherito.txt') as r:
     print(r.read())
 
 
-# comprobacion = print(f.read())
-# print(f)
-
-# print(r)
-
-# for i in f:
-#     print(f)
-#     f = open('ficherito.txt', 'x')
-#     print(f.read())
-# else:
-#     f = open('ficherito.txt', 'w')                               #creamos archivo ficherito.txt
-#     print(f.write("Estamos introduciendo contenido"))
-
     
                                                                 # bucle
 
 print(" Quiere sobreescribir el fichero?")
 pregunta = str(input().lower)   
-                                                        # input
+                                                                # input
 if pregunta == 'si':
     print("Introduce el nuevo nombre")
     pregunta2 = str(input().lower)
@@ -177,3 +164,33 @@ elif pregunta == 'si':
 # Tendréis que utlizar un bucle for para recorrer todo el archivo xml y extraer la información que os pedimos.
 # Recordad el método .text para extraer el texto de un elemento.
 # Happy coding! 💪
+
+
+
+def nombre_xml(nombre_archivo):
+    import xml.etree.ElementTree as ET
+
+    tree = ET.parse(nombre_archivo)                                         #analizamos el xml
+    root = tree.getroot()
+    
+   
+    for subelement in root:                                                 #recorremos el xml para sacar sus attrib
+            print('  ',subelement.attrib)
+            for subsubelement in subelement:
+                print('    ',subsubelement.attrib)
+                for subsubsubelement in subsubelement:
+                    print('    ',subsubsubelement.attrib)
+
+
+
+    for subelement in root:                                                 #recorremos el xml para sacar sus tag
+            print('  ',subelement.tag)
+            for subsubelement in subelement:
+                print('    ',subsubelement.tag)
+                for subsubsubelement in subsubelement:
+                    print('    ',subsubsubelement.tag)
+
+
+    # print(root.find('contact').find('type').text)
+
+nombre_xml("peliculas.xml")
