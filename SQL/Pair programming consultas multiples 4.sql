@@ -35,19 +35,25 @@ WHERE customer_id = (SELECT order_id
 				      FROM orderdetails
                                       WHERE order_id = 6));		
 										
-
--- Ejercicio 4. SUBCONSULTA EN WHERE. DEMASIADO SIMPLE?
+-- Ejercicio 4. Subconsulta en WHERE???
 /*Extraed los 10 productos mas caros. Nos siguen pidiendo más queries correlacionadas. En este caso 
-queremos saber cuáles son los 10 productos más caros. .
+queremos saber cuáles son los 10 productos más caros.*/
 
-SELECT unit_price, product_id
-FROM orderdetails
+SELECT o.unit_price, p.product_id, p.product_name
+FROM orderdetails AS o
+INNER JOIN products AS p
+ON o.product_id = p.product_id
 GROUP BY product_id
 ORDER BY unit_price DESC
 LIMIT 10; 
 
 
-
 -- Ejercicio 5. BONUS!!
-/* Qué producto es más popular. Extraed cuál es el producto que más ha sido comprado y la cantidad que 
-se compró*/
+/* Qué producto es más popular. Extraed cuál es el producto que más ha sido comprado y la cantidad que se compró*/
+
+SELECT o.product_id, SUM(o.quantity) AS suma_cantidad, p.product_name
+FROM orderdetails AS o
+INNER JOIN products AS p
+ON o.product_id = p.product_id
+GROUP BY product_id
+ORDER BY suma_cantidad DESC;
