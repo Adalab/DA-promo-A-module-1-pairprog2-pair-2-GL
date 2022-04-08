@@ -40,9 +40,10 @@ CREATE TABLE Facturas
  FOREIGN KEY (idZapatillas) REFERENCES zapatillas (idZapatillas));
 
 
-/*En esta sesión crearemos una nueva BBDD desde 0 :músculo::tono_de_piel-4:! Supongamos que tenemos una tienda de zapatillas y que durante mucho tiempo hemos ido recopilando mucha información 
-sobre nuestros empleados, las zapatillas que tenemos, los clientes y todas las facturas que hemos emitido. Nuestra información puede que este un poco desordenado y empieza a ser un poco complicado
-gestionar toda esa información, por lo que hemos decidido crearnos una BBDD en SQL. Para ello crearemos 4 tablas en la BBDD: - Empleados - Clientes - Facturas - Zapatillas
+/*En esta sesión crearemos una nueva BBDD desde 0 :músculo::tono_de_piel-4:! Supongamos que tenemos una tienda de zapatillas y que durante mucho tiempo hemos ido 
+recopilando mucha información sobre nuestros empleados, las zapatillas que tenemos, los clientes y todas las facturas que hemos emitido. Nuestra información 
+puede que este un poco desordenado y empieza a ser un poco complicado gestionar toda esa información, por lo que hemos decidido crearnos una BBDD en SQL. 
+Para ello crearemos 4 tablas en la BBDD: - Empleados - Clientes - Facturas - Zapatillas
 La tabla Facturas tiene una relación con la tabla Empleados y la tabla Clientes y la tabla Zapatillas. Estas tres últimas no tienen ninguna relación entre ellas.
 Carácteristicas de nuestras tablas
 Tabla Zapatillas: tiene 4 columnas: id, modelo, color, talla con las siguientes características:
