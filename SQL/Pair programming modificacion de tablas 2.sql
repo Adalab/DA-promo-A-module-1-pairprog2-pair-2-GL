@@ -1,4 +1,4 @@
-USE pairprogrammingleccion12 ;
+USE pairprogrammingleccion12 ; 
 -- Pair Porgramming Modificación de tablas 2
 
 /*Genial!!! Ya tenemos nuestra BBDD creada y con los errores solucionados. Ahora es el momento de manipularla un poco. Vamos a meter datos, actulizar datos que 
