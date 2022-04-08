@@ -8,13 +8,13 @@ todos los clientes y proveedores que tenemos en la BBDD. Mostrad la
 ciudad a la que pertenecen, el nombre de la empresa y el nombre del 
 contacto, además de la relación �Proveedpr o Cliente). Pero importante! 
 No debe haber duplicados en nuestra respuesta*/
-SELECT city, company_name, contact_name, contact_title
+SELECT city, company_name, contact_name, contact_title 
 FROM customers
 UNION
 SELECT city, company_name, contact_name, contact_title
 FROM suppliers ;
 /*Nos falta la relacion proveedor-cliente*/
-
+-- en SELECT 'customers', 'suppliers' 
 
 -- Ejercicio 2
 /*Extraer todos los pedidos gestinados por "Nancy Davolio"
