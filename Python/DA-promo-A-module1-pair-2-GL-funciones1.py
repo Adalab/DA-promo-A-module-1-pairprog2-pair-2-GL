@@ -8,32 +8,20 @@
 # Probad la función para las siguientes combinaciones de "números"
 
 #Opción 1:
-# def funcion1(string1, string2):
-#     if string1 == " " and string2 == " ":
-#         print("0")
-#     elif string1 == " ":
-#         print(string2)
-#     elif string2 == " ":
-#         print(string1)
-#     else:
-#         num1 = int(string1)
-#         num2 = int(string2)
-#         total_string = num1 + num2
-#         print("La suma de", string1, "+", string2, "es", str(total_string)) 
-# #para solucionar lo de los espacios tal vez se soluciona con lo de los 
-# funcion1(,)
-
-# a = 0
-# b = 0
-# def suma( a,b ):
-#     print(a + b)
-# print("Para completar la suma incluye dos números separados por una coma ej: (3,2)")
-# if a == "":
-#     a = 0
-# elif b == "":
-#     b = 0
-
-# suma(2,3)
+ def funcion1(string1, string2):
+     if string1 == " " and string2 == " ":
+         print("0")
+     elif string1 == " ":
+         print(string2)
+     elif string2 == " ":
+         print(string1)
+     else:
+         num1 = int(string1)
+         num2 = int(string2)
+         total_string = num1 + num2
+         print("La suma de", string1, "+", string2, "es", str(total_string)) 
+        
+funcion1('4', '5')
 
 # "4",  "5" --> "9"
 # "34", "5" --> "39"
@@ -48,97 +36,11 @@
 # Probad la función para las siguientes listas: 
 # 💡 Pista 💡 En Python existe el método zip.
 
-#Opción Alicia:
-
-arr1 = [13, 64, 15, 17, 88]
-arr2 = [23, 14, 53, 17, 80]
-# # resultado = [23, 64, 53, 17, 88]
-
-# opcion 1
-# def comparador(argumento1= arr1, argumento2 = arr2):
-
-#     num_mayores = []
-#     zip1 = zip(arr1, arr2)
-#     print(zip1)
-    
-#     for a,b in zip1[0][0]:
-#         if a < b:
-#             num_mayores[b]
-#         elif b > a:
-#             num_mayores[a]
-#         else:
-#             num_mayores[b]
-
-# comparador()
-
-
-    # zip1[0] == zip1[1]
-
-    # for num in arr1:
-    #     if num > arr2:
-    #         print(arr2)
-    #     elif num == arr2:
-    #         print(arr1)
-    #     else:
-    #         print(arr1)
-
-# comparador()
-#opción 2: con lo que pasó Guada al slack
-# arr1 = [13, 64, 15, 17, 88]
-# arr2 = [23, 14, 53, 17, 80]
-# arr_total = [(13, 23), (64, 14), (15, 53), (17, 17), (88, 80)]
-# type(arr1)
-# # zip1 = list(zip(arr1, arr2))
-# # print(zip1)
-
-# def comparador(argumento1= arr1, argumento2 = arr2):
-
-#     lista_num_mayores = []
-    
-#     for i in arr_total[0]: 
-                  
-#         for j in arr_total[0]:              #13,23
-#             a,b = arr_total[0][0], arr_total[0][1]
-
-#             print(j)
-                                
-#             if a <= b:
-#                 lista_num_mayores[b] 
-#             else:
-#                 lista_num_mayores[a]
-#         lista_num_mayores = lista_num_mayores.append()
-
-# comparador()
-
-
-
-#opción 3
-# arr1 = [13, 64, 15, 17, 88]
-# arr2 = [23, 14, 53, 17, 80]
-# type(arr1)
-# zip1 = list(zip(arr1, arr2))
-# print(zip1)
-
-# def comparador(argumento1= arr1, argumento2 = arr2):
-
-#     lista_num_mayores = []
-    
-#     for i in zip1[0]: 
-                  
-#         for j in zip1:              #13,23
-#             print(j)
-                               
-#             if i <= j:
-#                 lista_num_mayores[j] 
-#             else:
-#                 lista_num_mayores[i]
-#         lista_num_mayores = lista_num_mayores.append()
-
 # comparador()
 
 arr1 = [13, 64, 15, 17, 88]
 arr2 = [23, 14, 53, 17, 80]
-# resultado = [23, 64, 53, 17, 88]
+#resultado = [23, 64, 53, 17, 88]
 
 
 def comparador (arr1, arr2):
@@ -184,14 +86,6 @@ def repeticion (palabra):
             
 
 repeticion ('recede')
-
-
-#ver solución Anne (min 40). https://us02web.zoom.us/rec/play/5jwk2UArIqrgsPe5K4y9VrOO-pzm-I9a2e8JR5craZWA_Lgw9e7P9csjY8xFxDBKKkD3u_2u9_9bEDbr.mpetH1FwJEtKXiRZ?continueMode=true&_x_zm_rtaid=eBzLX_O7RwG_AMoR4UZbYw.1648802053437.4e8f769f2ff9e35d5dbc811300261ac6&_x_zm_rhtaid=439 
-#averiguar qué parte le estamos pidiendo y no existe (list out of range)
-
-
-
-
 
 
 ######################## BONUS
