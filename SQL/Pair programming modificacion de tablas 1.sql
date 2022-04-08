@@ -44,3 +44,4 @@ MODIFY Codigo_postal INT(5);
 
 ALTER TABLE Facturas
 ADD COLUMN Total FLOAT;
+
