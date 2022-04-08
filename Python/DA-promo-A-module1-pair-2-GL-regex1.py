@@ -1,8 +1,5 @@
 ## Pair programming 12 - Par 2 _ Guada, Laura - EXPRESIONES REGULARES ##
 
-
-import re
-
 contenido_email = '''Thu Oct 31 08:11:39 2002
         Return-Path: <bensul2004nng@spinfinder.com>
         X-Sieve: cmu-sieve 2.0
@@ -98,7 +95,6 @@ import re
 
 # To match a character having special meaning in regex, you need to use a escape sequence prefix with a backslash 
 # ( \ ). E.g., \. matches "." ; regex \+ matches "+" ; and regex \( matches "(" . You also need to use regex \\ to match "\" (back-slash).
-
 
 # Pair Programming Regex y Métodos de Strings
 # En este ejercicio pondremos en práctica los conocimientos aprendidos sobre métodos de *strings* y expresiones regulares.
