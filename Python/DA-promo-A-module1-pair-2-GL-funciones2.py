@@ -161,8 +161,6 @@ def ereh_un_primoh(num):
                 break
         else:
             print("True")
-            
-                  
     else:
         print("False")
 
