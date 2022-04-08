@@ -3,98 +3,7 @@
 
 import re
 
-contenido_email = ""
-
-
-
-##BUSCANDO PATRÓN
-
-
-import re
-contenido_email = ''' Message-Id: <200210311310.g9VDANt24674@bloodwork.mr.itd.UM>
-        From: "Mr. Ben Suleman" <bensul2004nng@spinfinder.com>
-        Date: Thu, 31 Oct 2002 05:10:00 '''
-
-
-# info_remitente = re.findall("([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)", email)
-info_remitente = re.findall("From: .*", contenido_email)
-
-solo_email = re.findall("<", info_remitente)
-print("Esto es lo que buscamos", solo_email)
-
-for mail in info_remitente:
-        print(mail)
-
-
-# To match a character having special meaning in regex, you need to use a escape sequence prefix with a backslash 
-# ( \ ). E.g., \. matches "." ; regex \+ matches "+" ; and regex \( matches "(" . You also need to use regex \\ to match "\" (back-slash).
-
-
-# Pair Programming Regex y Métodos de Strings
-# ​
-# En este ejercicio pondremos en práctica los conocimientos aprendidos sobre métodos de *strings* y expresiones regulares.
-# ​
-# Antes de empezar: 
-# ​
-# > �� Cargad el fichero del email que creamos en la sesión de *pair-programming* anterior y almacenarlo en una variable
-# ​
-# > �� Importad las librerías necesarias para poder usar las expresiones regulares
-# ​
-# ​
-# Recordad que en regex tenemos que buscar patrones para cada objetivo que os planteamos. Tendremos que poner en práctica todo lo aprendido hasta ahora. 
-# For loops, métodos de *strings*, indexación de listas, etc. 
-# ​
-# ​
-# ​
-# Los **objetivos** de la sesión de hoy son: 
-# ​
-# 1. Extraer el email de la persona que envió el email
-# ​
-#     �� **Pista** �� Tendremos que hacer dos busquedas: 
-# ​
-#     - Una para extraer toda la información del remitente. El remitente siempre empieza por `From: `
-# ​
-#         ```python
-#         info_remitente = re.findall('From:.*',email)
-#         ```
-# ​
-#     - Otra para extraer el email únicamente. 
-# ​
-# 2. Extraer el nombre de la persona que recibió el email. 
-    
-#     �� **Pista** �� Tendremos que hacer dos busquedas: 
-    
-#     - Podemos usar el resultado de la primera búsqueda del ejercicio anterior para sacar el nombre. 
-# ​
-#     - Otra para extraer el nombre únicamente.
-     
-# ​
-# 3. El día en el que se mandó el email. 
-# ​
-#     �� **Pista** �� De la misma forma que antes buscamos por `From:` primero, ahora lo tendremos que hacer con `Date: .*`
-# ​
-# ​
-# 4.  El asunto del email.
-# ​
-#     �� **Pista** �� Busca primero `"Subject:.*` y después busca el patrón para extraer el asunto.
-# ​
-# 5. Guarda todos los resultados en un diccionario
-# ​
-# ​
-# **���� BONUS ����** 
-# ​
-# Utiliza funciones para cada una de los objetivos planteados. 
-# ​
-# ​
-# **Happy coding!**
-# ​
-# 📌 Recordad que ha modo de apoyo tenemos la página [regex101](https://regex101.com/) para probar nuestros patrones de búsqueda. 
-
-
-
-
-############# EMAIL ANTERIOR DE FICHEROS 2
-Thu Oct 31 08:11:39 2002
+contenido_email = '''Thu Oct 31 08:11:39 2002
         Return-Path: <bensul2004nng@spinfinder.com>
         X-Sieve: cmu-sieve 2.0
         Return-Path: <bensul2004nng@spinfinder.com>
@@ -181,4 +90,68 @@ Thu Oct 31 08:11:39 2002
 
         YOUR SINCERELY,
 
-        MR. JAMES NGOLA. 
+        MR. JAMES NGOLA.'''
+
+##BUSCANDO PATRÓN
+
+import re
+
+# To match a character having special meaning in regex, you need to use a escape sequence prefix with a backslash 
+# ( \ ). E.g., \. matches "." ; regex \+ matches "+" ; and regex \( matches "(" . You also need to use regex \\ to match "\" (back-slash).
+
+
+# Pair Programming Regex y Métodos de Strings
+# En este ejercicio pondremos en práctica los conocimientos aprendidos sobre métodos de *strings* y expresiones regulares.
+# Antes de empezar: 
+# > �� Cargad el fichero del email que creamos en la sesión de *pair-programming* anterior y almacenarlo en una variable
+# > �� Importad las librerías necesarias para poder usar las expresiones regulares
+#
+# Recordad que en regex tenemos que buscar patrones para cada objetivo que os planteamos. Tendremos que poner en práctica todo lo aprendido hasta ahora. 
+# For loops, métodos de *strings*, indexación de listas, etc. 
+#
+# Los **objetivos** de la sesión de hoy son: 
+# 1. Extraer el email de la persona que envió el email
+#     �� **Pista** �� Tendremos que hacer dos busquedas: 
+#     - Una para extraer toda la información del remitente. El remitente siempre empieza por `From: `
+#         ```python
+#         info_remitente = re.findall('From:.*',email)
+#         ```
+#     - Otra para extraer el email únicamente. 
+
+info_remitente = re.findall('From:.*',contenido_email)
+print(info_remitente)
+email_remitente = re.findall('\w*@\w*',str(info_remitente))
+print('Email de los remitentes:', email_remitente)
+
+# 2. Extraer el nombre de la persona que recibió el email. 
+    
+#     �� **Pista** �� Tendremos que hacer dos busquedas:     
+#     - Podemos usar el resultado de la primera búsqueda del ejercicio anterior para sacar el nombre. 
+#     - Otra para extraer el nombre únicamente
+nombres = re.compile('Mr. \w+ \w+|MR. \w+ \w+')
+nombres_remitente = nombres.findall(str(info_remitente))
+print('Nombre de los remitentes:', nombres_remitente)
+# 3. El día en el que se mandó el email. 
+# ​
+#     �� **Pista** �� De la misma forma que antes buscamos por `From:` primero, ahora lo tendremos que hacer con `Date: .*`
+fecha_email = re.findall('Date: .*', contenido_email)
+print('La fecha de los emails es:', fecha_email)
+
+# 4.  El asunto del email.
+#     �� **Pista** �� Busca primero `"Subject:.*` y después busca el patrón para extraer el asunto.
+asunto = re.findall('Subject:.*', contenido_email)
+print('El asunto del email es:', asunto)
+
+# 5. Guarda todos los resultados en un diccionario
+resultados = {'info_remitentes:' info_remitente, 'nombres_remitentes:' nombres_remitentes, 'fecha_email':fecha_email, 'asunto':asunto}
+print(resultados)
+
+# **���� BONUS ����** 
+# ​
+# Utiliza funciones para cada una de los objetivos planteados. 
+# ​
+# ​
+# **Happy coding!**
+# ​
+# 📌 Recordad que ha modo de apoyo tenemos la página [regex101](https://regex101.com/) para probar nuestros patrones de búsqueda. 
+
