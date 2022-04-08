@@ -30,7 +30,8 @@ VALUES (123 , 20011211, 1, 2, 1, 54.98),
 (1234, 20050523, 1, 1, 3, 89.91), 
 (12345, 20150918, 2, 3, 3, 76.23) ;
 
-/*De nuevo nos hemos dado cuenta que hay algunos errores en la insercción de datos. En este ejercicios los actualizaremos para que nuestra BBDD este perfectita.Tabla zapatillas:
+/*De nuevo nos hemos dado cuenta que hay algunos errores en la insercción de datos. En este ejercicios los actualizaremos para que nuestra 
+BBDD este perfectita.Tabla zapatillas:
 
 En nuestra tienda no vendemos zapatillas Rosas... ¿Cómo es posible que tengamos zapatillas de color rosa? :cara_pensativa: En realidad esas zapatillas son amarillas.*/
 
